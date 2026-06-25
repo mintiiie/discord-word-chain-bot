@@ -1,4 +1,14 @@
 require("dotenv").config();
+const http = require("http");
+
+const port = process.env.PORT || 3000;
+
+http.createServer((req, res) => {
+  res.writeHead(200);
+  res.end("Bot is running");
+}).listen(port, () => {
+  console.log(`Web server running on port ${port}`);
+});
 const { Client, GatewayIntentBits } = require("discord.js");
 
 const client = new Client({

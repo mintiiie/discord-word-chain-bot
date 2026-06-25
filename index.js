@@ -88,6 +88,8 @@ function stopGame(channelId) {
 
 client.once("ready", () => {
   console.log("🤖 Bot nối từ online");
+  console.log("Bot:", client.user.tag);
+  console.log("ID:", client.user.id);
 });
 
 client.on("messageCreate", async (msg) => {
